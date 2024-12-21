@@ -26,11 +26,9 @@ public class addForm_Controller implements Initializable {
         Double price = Double.parseDouble(PriceField.getText());
         String dsc = DescField.getText();
 
-
         DBConnection.getInstance().getConnection().add(new Items(Id,name,qty,price,dsc));
         System.out.println(DBConnection.getInstance().getConnection());
         updateNextItemId();
-
 
     }
     private void loadTable(){
