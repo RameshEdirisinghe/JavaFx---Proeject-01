@@ -31,9 +31,7 @@ public class addForm_Controller implements Initializable {
         updateNextItemId();
 
     }
-    private void loadTable(){
 
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

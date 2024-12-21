@@ -36,4 +36,20 @@ public class viewForm_Controller {
 
         tblViewForm.setItems(itemObservableList);
     }
+
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+        Items selectedItem = (Items) tblViewForm.getSelectionModel().getSelectedItem();
+        System.out.println(selectedItem.toString());
+
+        if (selectedItem != null) {
+            DBConnection.getInstance().getConnection().remove(selectedItem);
+            tblViewForm.getItems().remove(selectedItem);
+        }else{
+            System.out.println("No selected item");
+            loadTable();
+        }
+
+
+    }
 }
